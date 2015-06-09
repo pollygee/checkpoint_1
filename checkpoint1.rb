@@ -12,7 +12,6 @@ end
 class Cart
   def initialize
     @items = []
-    @value = 0
   end
 
   def item_count
@@ -24,6 +23,7 @@ class Cart
   end
 
   def value
+    @value = 0
     @items.each do |book|
       @value += book.price
     end
